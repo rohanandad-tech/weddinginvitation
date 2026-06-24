@@ -319,8 +319,7 @@ section{position:relative;overflow:hidden}
        COVER PENJORS
        Change src="" to match your actual SVG filenames.
        ════════════════════════════════════════════════════ -->
-  <div class="penjor-wrap penjor-l" aria-hidden="true"><img src="penjor_kiri.svg" alt=""></div>
-  <div class="penjor-wrap penjor-r" aria-hidden="true"><img src="penjor_kanan.svg" alt=""></div>
+  <div class="penjor-wrap penjor-l" aria-hidden="true"><img src="penjor_sepasang.svg" alt=""></div>
   <div class="cv-frame">
     <div class="cv-pre" data-i18n="cover_pre"></div>
     <div class="cv-names" id="cv-names"></div>
@@ -507,7 +506,7 @@ section{position:relative;overflow:hidden}
   <div class="wrap" style="position:relative;z-index:1">
     <div data-reveal>
       <!-- CLOSING DUCK: the one duck illustration, gold-tinted -->
-      <img class="closing-duck" src="duck_2.svg" alt="">
+      <img class="closing-duck" src="bebek_bunga.svg" alt="">
       <div class="closing-tk" data-i18n="closing_tk"></div>
       <p class="closing-text" data-i18n="closing_text"></p>
       <div class="closing-sig" id="cl-sig"></div>
@@ -573,8 +572,8 @@ const CONFIG = {
   // Edit the year, title, and text for each film-strip frame.
   // hasDucks:true shows the duck illustration in that frame.
   story: [
-    { year:"2020", title:{id:"Pertemuan Pertama",en:"First Meeting"},
-      text:{id:"Sebuah pertemuan sederhana yang mengubah segalanya.",en:"A simple encounter that changed everything."} },
+    { year:"2024", title:{id:"Pertemuan Pertama",en:"First Meeting"},
+      text:{id:"Pertama kali dikenalin sama seniornya Hana waktu intern, berakhir dengan menemukan soulmate yang selama ini mereka berdua cari.",en:"A simple encounter that changed everything."} },
     { year:"2021", title:{id:"Mulai Dekat",en:"Growing Closer"},
       text:{id:"Satu percakapan menjadi seribu — dan tidak pernah berhenti.",en:"One conversation became a thousand — and never stopped."} },
     { year:"2022", title:{id:"Bebek & Cinta 🦆",en:"Ducks & Love 🦆"},
@@ -612,11 +611,11 @@ const CONFIG = {
   // ── RSVP ──────────────────────────────────────────────────────
   // After setting up Code.gs in Google Sheets, paste the /exec URL here.
   // Until then, form shows thank-you but doesn't save anywhere.
-  rsvpEndpoint: "",  // ← e.g. "https://script.google.com/macros/s/xxx/exec"
+  rsvpEndpoint: "https://docs.google.com/spreadsheets/d/1slZEFkoXJsitzMmpajTq_LBJMUiy-YzPsET6PL-NVb4/edit?usp=sharing"
 
   // WhatsApp fallback shown below the RSVP form.
   // Replace 628xxx with your real number (with country code, no +).
-  waFallback: "https://wa.me/62800000000?text=Konfirmasi+kehadiran+pernikahan+Ari+%26+Hana"
+  waFallback: "https://wa.me/6285792223193text=Konfirmasi+kehadiran+pernikahan+Ari+%26+Hana"
 };
 
 /* ── UI STRINGS ── */
@@ -737,7 +736,7 @@ function render(){
   CONFIG.story.forEach(fr=>{
     const div=document.createElement("div"); div.className="film-frame";
     div.innerHTML='<div class="frame-yr">'+fr.year+'</div><div class="frame-title">'+p(fr.title)+'</div><div class="frame-text">'+p(fr.text)+'</div>'
-      +(fr.hasDucks?'<div class="frame-duck"><img src="duck_2.svg" alt="duck"></div>':'');
+      +(fr.hasDucks?'<div class="frame-duck"><img src="bebek_kecil.svg" alt="duck"></div>':'');
     track.appendChild(div);
   });
 
